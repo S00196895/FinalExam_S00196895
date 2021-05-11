@@ -45,7 +45,7 @@ namespace BartlomiejSajdok_S00196895
             string selectedPlatform = gameSelection.SelectedItem as string;
 
             var query = from gd in db.Games
-                        where gd.Platform == selectedPlatform
+                        where gd.Platform == selectedPlatform || gd.MetricScore == 88
                         select gd;
 
             var results = query.ToList();
