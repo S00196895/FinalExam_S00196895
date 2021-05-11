@@ -11,7 +11,7 @@ namespace UnitTestProject1
         public void TestDecreasePrice()
         {
             //arrange
-            Game g1 = new Game("Nier", 9.5, 59.99m);
+            Game g1 = new Game("Nier", "PS4, PS5, XBOX ONE", 9.5, 59.99m);
             decimal expectedPrice = 49.99m;
             //act
             g1.DecreasePrice(10.00m);

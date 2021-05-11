@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,7 @@ namespace BartlomiejSajdok_S00196895
         public decimal Price { get; set; }
         public string GameImage { get; set; }
 
-        public Game(string name, double metricScore, decimal price, string description = "", string platform = "",  string gameImage = "" )
+        public Game(string name, string platform, double metricScore, decimal price, string gameImage = "", string description = ""    )
         {
             Name = name;
             MetricScore = metricScore;
@@ -24,9 +25,23 @@ namespace BartlomiejSajdok_S00196895
             Price = price;
             GameImage = gameImage;
         }
+
+        public Game()
+        {
+        }
+
         public void DecreasePrice(decimal decrease)
         {
             Price -= decrease;
         }
+    }
+    //code for the database
+    public class GameData : DbContext
+    {
+        //naming the database
+        public GameData() : base("MyGameData") { }
+
+        //creating the table
+        public DbSet<Game> Games { get; set; }
     }
 }
