@@ -9,8 +9,9 @@
     <Grid>
         <ListBox x:Name="lbxGames" HorizontalAlignment="Left" Height="369" Margin="26,41,0,0" VerticalAlignment="Top" Width="312" SelectionChanged="LbxGames_SelectionChanged"/>
         <ComboBox x:Name="gameSelection" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="312" SelectionChanged="GameSelection_SelectionChanged"/>
-        <TextBox x:Name="tblkDescription" HorizontalAlignment="Left" Height="23" Margin="558,27,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Image x:Name="gameImage" HorizontalAlignment="Left" Height="176" Margin="542,132,0,0" VerticalAlignment="Top" Width="165"/>
+        <TextBox x:Name="tblkDescription" HorizontalAlignment="Left" Height="293" Margin="365,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177"/>
+        <Image x:Name="gameImage" HorizontalAlignment="Left" Height="176" Margin="598,132,0,0" VerticalAlignment="Top" Width="165"/>
+        <TextBlock x:Name="tblkPrice" HorizontalAlignment="Left" Margin="652,343,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.402,0.49" Width="57"/>
 
     </Grid>
 </Window>

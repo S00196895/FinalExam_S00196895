@@ -60,7 +60,8 @@ namespace BartlomiejSajdok_S00196895
             if (selectedGame != null)
             {
                 gameImage.Source = new BitmapImage(new Uri(selectedGame.GameImage, UriKind.Relative));
-
+                tblkDescription.Text = selectedGame.Description + " With an average score of " + selectedGame.MetricScore;
+                tblkPrice.Text = "€" + selectedGame.Price.ToString();
             }
         }
     }
