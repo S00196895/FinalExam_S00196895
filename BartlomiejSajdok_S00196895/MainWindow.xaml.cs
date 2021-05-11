@@ -20,7 +20,7 @@ namespace BartlomiejSajdok_S00196895
     /// </summary>
     public partial class MainWindow : Window
     {
-       
+        //Github link just in case: https://github.com/Bartek2502/FinalExam_S00196895
         GameData db = new GameData();
         public MainWindow()
         {
