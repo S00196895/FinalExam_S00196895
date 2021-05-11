@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BartlomiejSajdok_S00196895"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        
+        <ListBox x:Name="lbxGames" HorizontalAlignment="Left" Height="369" Margin="26,41,0,0" VerticalAlignment="Top" Width="312"/>
+        <ComboBox x:Name="gameSelection" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="312" SelectionChanged="GameSelection_SelectionChanged"/>
+        <TextBox x:Name="tblkDescription" HorizontalAlignment="Left" Height="23" Margin="558,27,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Image x:Name="gameImage" HorizontalAlignment="Left" Height="176" Margin="542,132,0,0" VerticalAlignment="Top" Width="165"/>
+
     </Grid>
 </Window>
