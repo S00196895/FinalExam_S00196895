@@ -62,6 +62,7 @@ namespace DataManagment
                 db.Games.Add(g4);
                 Console.WriteLine("Added games to db");
 
+                //Saving database
                 db.SaveChanges();
                 Console.WriteLine("Saved changes");
             }
