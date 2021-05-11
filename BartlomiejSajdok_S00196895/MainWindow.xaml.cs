@@ -31,7 +31,7 @@ namespace BartlomiejSajdok_S00196895
             string[] gamePlatforms = { "PC", "PS", "Xbox", "Switch" };
             gameSelection.ItemsSource = gamePlatforms;
 
-
+            //filling the listbox with games
             var query = from gd in db.Games
                         orderby gd.Name
                         select gd;
@@ -45,6 +45,8 @@ namespace BartlomiejSajdok_S00196895
             string selectedPlatform = gameSelection.SelectedItem as string;
 
             var query = from gd in db.Games
+                        //this checks if the game has the same platform as the selected platform 
+                        //except it takes two, which has multiple platforms therefore I filtered it by score
                         where gd.Platform == selectedPlatform || gd.MetricScore == 88
                         select gd;
 
@@ -57,6 +59,7 @@ namespace BartlomiejSajdok_S00196895
         {
             Game selectedGame = lbxGames.SelectedItem as Game;
 
+            //displaying information depending on the game selected
             if (selectedGame != null)
             {
                 gameImage.Source = new BitmapImage(new Uri(selectedGame.GameImage, UriKind.Relative));
