@@ -16,6 +16,10 @@ namespace BartlomiejSajdok_S00196895
         public string Platform { get; set; }
         public decimal Price { get; set; }
         public string GameImage { get; set; }
+        public override string ToString()
+        {
+            return Name;
+        }
 
         public Game(string name, string platform, double metricScore, decimal price, string gameImage = "", string description = ""    )
         {
