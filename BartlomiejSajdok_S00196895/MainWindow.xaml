@@ -6,8 +6,19 @@
         xmlns:local="clr-namespace:BartlomiejSajdok_S00196895"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Window.Resources>
+        <DataTemplate x:Key="listboxTemplate">
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <Image Source="{Binding GameImage}" Width="75"/>
+                <StackPanel>
+                    <TextBlock Text="{Binding Name}" Margin="5" FontSize="12"/>
+                    <TextBlock Text="{Binding MetricScore}" Margin="5" FontSize="12"/>
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
     <Grid>
-        <ListBox x:Name="lbxGames" HorizontalAlignment="Left" Height="369" Margin="26,41,0,0" VerticalAlignment="Top" Width="312" SelectionChanged="LbxGames_SelectionChanged"/>
+        <ListBox x:Name="lbxGames" HorizontalAlignment="Left" Height="369" Margin="26,41,0,0" VerticalAlignment="Top" Width="312" SelectionChanged="LbxGames_SelectionChanged" ItemTemplate="{StaticResource listboxTemplate}"/>
         <ComboBox x:Name="gameSelection" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="312" SelectionChanged="GameSelection_SelectionChanged"/>
         <TextBox x:Name="tblkDescription" HorizontalAlignment="Left" Height="293" Margin="365,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177"/>
         <Image x:Name="gameImage" HorizontalAlignment="Left" Height="176" Margin="598,132,0,0" VerticalAlignment="Top" Width="165"/>
