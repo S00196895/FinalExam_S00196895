@@ -14,5 +14,19 @@ namespace BartlomiejSajdok_S00196895
         public string Platform { get; set; }
         public decimal Price { get; set; }
         public string GameImage { get; set; }
+
+        public Game(string name, double metricScore, decimal price, string description = "", string platform = "",  string gameImage = "" )
+        {
+            Name = name;
+            MetricScore = metricScore;
+            Description = description;
+            Platform = platform;
+            Price = price;
+            GameImage = gameImage;
+        }
+        public void DecreasePrice(decimal decrease)
+        {
+            Price -= decrease;
+        }
     }
 }
